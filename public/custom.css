@@ -1,0 +1,24 @@
+html {
+}
+
+body {
+  padding: 1em;
+  border-style: solid;
+  border-color: green;
+  border-width: 0 1px 1px 1px;
+}
+header {
+  text-align: center;
+}
+
+h1 {
+  color: green;
+  padding: 0.5em 0 0 0;
+}
+nav a {
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+}

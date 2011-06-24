@@ -1,0 +1,2 @@
+=The Reference Evapotranspiration Project
+A web site about the LBL reference evapotranspiration research project. Written in the Sinatra web framework, hosted on heroku.
