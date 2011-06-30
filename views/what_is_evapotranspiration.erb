@@ -1,0 +1,62 @@
+<section>
+  <h2>What is Evapotranspiration?</h2>
+  <p>Evapotranspiration indicates how much water a plant loses through evaporation (from the soil) and transpiration (from the surface of the plant itself). 
+  It has units of water depth per time, such as millimeters per day, indicating how much water would have to be replaced through precipiation and irrigation in order for the plant to make up for water lost through evapotranspiration.</p>
+
+  <p>For example, if someone says that the evapotranspiration of corn in June in Nebraska is 5 inches, 
+  then we'd know that corn in Nebraska in June needs 5 inches of water to grow.
+  If it rains 4 inches in June, then we'd know that we need to provide 1 inch of irrigation.</p>
+
+  <p>Evapotranspiration is the product of a <em>crop coefficient</em> (K<sub>C</sub>) 
+  and a <em>reference evapotranspiration</em> (ET<sub>0</sub>), yielding a crop evapotranspiration ET<sub>C</sub>:</p>
+  <div class="equation">ET<sub>C</sub> = K<sub>C</sub> * ET<sub>0</sub></div>
+
+  <p>The crop coefficient depends only on the properties of the plant, 
+  and reference evapotranspiration depends only on meteorological variables such as temperature, 
+  humidity, wind speed, atmospheric pressure, and sunlight.
+  This makes evapotranspiration highly dependent on three factors: crop, geography, and time of year (season).</p>
+
+  <h2>Example: Switch Grass</h2>
+  <p>Consider switch grass, a crop with potential to be a useful biofuel feedstock. 
+  The crop coefficient of switch grass, K<sub>switch grass</sub>, is 1.53; 
+  it never changes, regardless of location, weather, or time of year. 
+  (Actually we're simplifying a bit; a more subtle model would adjust the crop coefficient K<sub>switch grass</sub> for growing season.)
+  The reference evapotranspiration, however, 
+  is different depending on where the switch grass is grown, and when.</p>
+
+  <p>For example, if switch grass is grown in Oregon in January, 
+  we'd need to use a reference evapotranspiration for Oregon in January (which is 45 millimeters). 
+  But if the switch grass was grown in South Carolina in January, 
+  we'd have to use a reference evaporatranspirition for January in South Carolina (which is 156 millimeters).</p>
+  <table>
+    <caption>Example evapotranspiration calculation for switch grass in January</caption>
+    <thead>
+      <tr>
+      <th></th>
+      <th>Month</th>
+      <th>Crop Coefficient <br>K<sub>switch grass</sub></th>
+      <th>Reference Evapotranspiration <br>ET<sub>0</sub></th>
+      <th>Calculation <br>(K<sub>switch grass</sub> * ET<sub>0</sub>)</th>
+      <th>Evapotranspiration of Switch Grass <br>ET<sub>switch grass</sub></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Oregon</td>
+        <td>1</td>
+        <td>1.53</td>
+        <td>45 millimeters/month</td>
+        <td>1.53 * 45 millimeters/month</td>
+        <td><%= 1.53*45%> millimeters/month</td>
+      </tr>
+      <tr>
+        <td>South Carolina</td>
+        <td>1</td>
+        <td>1.53</td>
+        <td>156 millimeters/month</td>
+      <td>1.53 * 156 millimeters/month</td>
+      <td><%= 1.53*156%> millimeters/month</td>
+    </tr>
+    </tbody>
+  </table>
+</section>

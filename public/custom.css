@@ -7,18 +7,30 @@ body {
   border-color: green;
   border-width: 0 1px 1px 1px;
 }
+
 header {
   text-align: center;
+}
+
+header a {
+  text-decoration: none;
 }
 
 h1 {
   color: green;
   padding: 0.5em 0 0 0;
 }
-nav a {
-  text-decoration: none;
+
+p {
+  font-size: 140%;
 }
 
-footer {
+.equation {
   text-align: center;
+  font-size: 140%;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 0;
 }

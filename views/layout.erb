@@ -1,24 +1,26 @@
 <!doctype html>
 <head>
+  <script type='text/javascript' src='jquery.js' /></script>
+  <script type='text/javascript' src='custom.js' /></script>
   <link rel='stylesheet' type='text/css' href='/blueprint/screen.css' />
   <link rel='stylesheet' type='text/css' href='custom.css' />
 </head>
 <body class="container">
   <header>
-    <h1>The Reference Evapotranspiration Project</h1>
+  <h1><a href="/">The Reference Evapotranspiration Project</a></h1>
     <nav>
       <ul>
-        <li><a href="#">What is Reference Evapotranspiration?</a></li>
+        <li><a href="what-is-evapotranspiration">What is Evapotranspiration?</a></li>
+        <li><a href="calculation">How is Reference Evapotranspiration Calculated?</a></li>
         <li><a href="#">What is Evapotranspiration Used For?</a></li>
-        <li><a href="#">About this project</a></li>
-        <li><a href="#">About LBNL</a></li>
+        <li><a href="about">About this project</a></li>
       </ul>
     </nav>
     </header>
     <%= yield %>
     <footer>
-      <p>Copyright 2011, Katie Coughlin</p>
+    <p>Copyright <%= Time.now.year %></p>
+    <p>Last updated June, 2011</p>
   </footer>
 </body>
 </html>
-
