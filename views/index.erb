@@ -1,58 +1,45 @@
 <section>
-<p>The table below presents the results of The Reference Evapotranspiration Project.
-Reference evapotranspiration (ET<sub>0</sub>) is calculated using the Penman-Monteith equation according to methods laid out by the United Nations' Food and Agriculture Organization in <a href="#">FAO 56</a>.
-Results are presented for the 48 continental U.S. states, including sub-regions where appropriate.
-Weather data comes from the <a href="nrel.gov">National Renewable Energy Laboratory</a>'s <a href="3">TMY3</a> data set.</p>
+<p>
+The table below presents the results of The Reference Evapotranspiration Project.
+  Reference evapotranspiration (ET<sub>0</sub>) is calculated using the Penman-Monteith equation according to methods laid out by the United Nations' Food and Agriculture Organization in <a href="#">FAO 56</a>.
+  Results are presented for the 48 continental U.S. states, including sub-regions where appropriate.
+  Weather data comes from the <a href="nrel.gov">National Renewable Energy Laboratory</a>'s <a href="3">TMY3</a> data set.
+  You may also <a href="/public/monthly_base.csv">download the raw data as a CSV file</a>.
+  </p>
+
+
   <table>
     <caption>Monthly Evapotranspiration by State (mm/month)</caption>
-     <thead>
-       <tr>
-         <th>State</th>
-         <th>1</th>
-         <th>2</th>
-         <th>3</th>
-         <th>4</th>
-         <th>5</th>
-         <th>6</th>
-         <th>7</th>
-         <th>8</th>
-         <th>9</th>
-         <th>10</th>
-         <th>11</th>
-         <th>12</th>
-       </tr> 
-     </thead>
-     <tbody>
-       <tr>
-         <td>Alabama</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-         <td>23.53</td>
-      </tr>
-      <tr> 
-        <td>Arkansas</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-        <td>24.52</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>Sub-Region</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+          <th>11</th>
+          <th>12</th>
+        </tr> 
+      </thead>
+    <tbody>
+      <% (0..@number_of_regions-1).each do |region| %>
+        <tr>
+          <% first_row_of_region = region*12 %>
+          <td><%= @monthly_base[first_row_of_region][0] %>
+          <td><%= @monthly_base[first_row_of_region][0] %>
+          <% (0..11).each do |month| %>
+            <% next_12_rows = region*12+month %>
+            <td><%= @monthly_base[next_12_rows][7].to_i %></td>
+          <% end %>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </section>
