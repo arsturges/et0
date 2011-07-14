@@ -33,7 +33,7 @@ The table below presents the results of The Reference Evapotranspiration Project
         <tr>
           <% first_row_of_region = region*12 %>
           <td><%= @monthly_base[first_row_of_region][0] %>
-          <td><%= @monthly_base[first_row_of_region][0] %>
+          <td><%= @monthly_base[first_row_of_region][1] %>
           <% (0..11).each do |month| %>
             <% next_12_rows = region*12+month %>
             <td><%= @monthly_base[next_12_rows][7].to_i %></td>
