@@ -1,3 +1,17 @@
+/* Todo: 
+  left-hand navigation, 
+  top-left picture of grass growing with thick border, 
+  intelligent color choices (green dominant), 
+  dark gray instead of black. 
+  Layout first, then add color. 
+  Use rounded corners. 
+  Gradiant across the top for web 2.0 authenticity. 
+  Plenty of whitespace. See page 89 (mozilla and new bamboo). 
+  Drop shadows, focal points, scan lines on page 96. 
+  Appropriately larger leading to increase readability (may have been taken care of by BluePrintCSS). 
+  Images from Stock.XCHNG, restriction-free, or MorgeFile.com.
+*/
+
 html {
   font-size: 120%;
 }
@@ -22,7 +36,7 @@ header li {
   padding: 0 0.3em 0 0.3em;
 }
 
-header ul li a {
+header a {
   text-decoration: none;
 }
 
