@@ -28,5 +28,5 @@ get '/what-is-evapotranspiration' do
 end
 
 get '/how-is-evapotranspiration-used' do
-  erb: :how_is_evapotranspiration_used
+  erb :how_is_evapotranspiration_used
 end
